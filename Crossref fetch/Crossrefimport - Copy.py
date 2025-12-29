@@ -8,7 +8,7 @@ def fetch_publication_date(doi):
     
     if response.status_code == 200:
         data = response.json()
-        publication_date = data['message']['created']['date-time']
+        publication_date = data['message']['issue']['date-time']
         return publication_date
     else:
         return None 
